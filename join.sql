@@ -64,8 +64,8 @@ INNER JOIN `degrees`
 	ON `courses`.`degree_id` = `degrees`.`id`
 INNER JOIN `departments` 
 	ON `degrees`.`department_id` = `departments`.`id`
-WHERE `departments`.`name` = "Dipartimento di Matematica";
-ORDER BY `teachers`.`name`;
+WHERE `departments`.`name` = "Dipartimento di Matematica"
+GROUP BY `teachers`.`name`, `teachers`.`surname`;
 
 --7. BONUS: Selezionare per ogni studente quanti tentativi d’esame ha sostenuto 
 --   per superare ciascuno dei suoi esami
